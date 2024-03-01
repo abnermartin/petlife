@@ -1,0 +1,189 @@
+* {            /*Por padrão, o navegador vem com margens, precisamos tirar */     
+    
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}       /* o asterisco serve pra selecionar todo o conteúdo do código */
+
+body{
+    color: #263138;
+}
+
+.cabecalho{
+    background-color: #ff9a6c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+header a { /*serve para selecionar elementos dentro de outros elementos, ao invés de criar classes. */
+    color: white;
+    font-weight: 600;
+    padding: 30px;
+    text-decoration: none;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px 128px 80px;
+    position: relative;
+}
+
+h1, h2{
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo{
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.botao{
+    background-color: #ff725e;
+    color: white ;
+    text-decoration: none;
+    /*vertical , horizontal */
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
+.botao-transparente{
+    background-color: transparent;
+    color: #FF725E;
+    padding: 16px 32px;
+    text-underline-offset: 4px; /*define como fica o sublinhado abaixo do texto */
+    border-radius: 8px;
+}
+
+.absolute{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;  /*pisição de profundidade de um elemento */
+}
+
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#clinica li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#farmacia {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+#duvidas {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+.duvida{
+    position: relative;
+}
+
+.duvida h3{
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.duvida img{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo{
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0px 24px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.duvida.ativa .paragrafo { /*selecionei um elemento que tem tanto a classe "duvida" quanto a classe "ativa" e dentro deles vou selecionar um "paragrafo" */
+    height: fit-content; /*Esse "fit-content" é  uma propriedade que faz com que fica no tamanho certinho para caber o conteúdo dentro */
+    opacity: 1;
+    padding: 24px;
+}
+
+footer {
+    background-color: rgba(255, 152, 108, 0.25); /*Esse A do rgba é o alpha, ou seja, o nível de transparencia da cor */
+    display: flex;
+    gap: 70px;
+    padding: 60px 80px;
+}
+
+footer img ,
+footer .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color: #263138;
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: underline;
+    max-width: 350px;
+}
+
+footer p{
+    margin-bottom: 12px;
+}
+
+footer p a{
+    display: block;
+    color: #FF725E;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.mapa{
+    margin-bottom: 12px;
+}
+
+.copyright {
+    color: white;
+    background-color: #263138;
+    padding: 24px;
+    text-align: center;
+}
+
+.copyright a {
+    color: #ff9a6c;
+}
